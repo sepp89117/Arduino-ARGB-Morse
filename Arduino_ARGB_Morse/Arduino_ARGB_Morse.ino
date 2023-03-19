@@ -114,7 +114,7 @@ void displayMorseCode(String morseCode) {
   // Reset pixelIndex to the index of the first pixel
   pixelIndex = firstPixelIndex;
 
-  // Run through all characters of the morse code ('morseCode.length() - 1' because the last char of a sequence is '\0')
+  // Run through all characters of the morse code ('morseCode.length() - 1' because the last char of a sequence is '\n')
   for (int i = 0; i < morseCode.length() - 1; i++) {
     // Get a 'char' from the next character in morse code
     char c = morseCode.charAt(i);
@@ -123,7 +123,7 @@ void displayMorseCode(String morseCode) {
     Serial.print(c);
 
     // Check that it's not the last char
-    bool isNotLastChar = i < morseCode.length() - 2; // '- 2' because the last char of a sequence is '\0'
+    bool isNotLastChar = i < morseCode.length() - 2; // '- 2' because the last char of a sequence is '\n'
 
     // Show the char on the strip
     switch (c) {
