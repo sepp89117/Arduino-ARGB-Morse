@@ -20,7 +20,6 @@ uint8_t spaceLetters = 4; // Pixels spacing between letters
 uint8_t spaceWords = 8; // Pixels spacing between words
 // Delays
 uint16_t delayDit = 100; // Higher delay makes the show slower
-uint16_t delayLines = 2000; // Delay before new line (when there are not enough LEDs for the next signal)
 
 void setup() {
   Serial.begin(9600);
